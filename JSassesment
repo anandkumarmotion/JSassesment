@@ -1,0 +1,43 @@
+// Step 1: Create a variable to hold your NFT's
+let nfts = [];
+
+// Step 2: This function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function mintNFT(name, artist, dateCreated, description) {
+    const nft = {
+        name: name,
+        artist: artist,
+        dateCreated: dateCreated,
+        description: description
+    };
+    nfts.push(nft);
+}
+
+// Step 3: Create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs() {
+    nfts.forEach((nft, index) => {
+        console.log(NFT #${index + 1});
+        console.log(Name: ${nft.name});
+        console.log(Artist: ${nft.artist});
+        console.log(Date Created: ${nft.dateCreated});
+        console.log(Description: ${nft.description});
+        console.log('-------------------------');
+    });
+}
+
+// Step 4: Print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+    return nfts.length;
+}
+
+// Call your functions below this line
+mintNFT("Mona Lisa", "Leonardo da Vinci", "1503", "A portrait of Lisa Gherardini.");
+mintNFT("Starry Night", "Vincent van Gogh", "1889", "A depiction of van Gogh's view from his asylum room.");
+mintNFT("The Scream", "Edvard Munch", "1893", "An expressionist depiction of a figure with an agonized expression.");
+mintNFT("Girl with a Pearl Earring", "Johannes Vermeer", "1665", "A tronie of a girl with a pearl earring.");
+
+listNFTs();
+
+console.log(Total Supply: ${getTotalSupply()});
